@@ -1,0 +1,43 @@
+bizpage-styling:
+  version: 1.x
+  css:
+    base:
+      css/base/element.css: {}
+      css/base/reset.css: {}
+      css/base/utilities.css: {}
+    theme:
+      css/regions/about.css: {}
+      css/regions/action.css: {}
+      css/regions/client.css: {}
+      css/regions/fact.css: {}
+      css/regions/contact.css: {}
+      css/regions/feature.css: {}
+      css/regions/footer.css: {}
+      css/regions/header.css: {}
+      css/regions/portfolio.css: {}
+      css/regions/primary-menu.css: {}
+      css/regions/skill.css: {}
+      css/regions/service.css: {}
+      css/regions/team.css: {}
+      css/regions/sidebar.css: {}
+      css/regions/testimonial.css: {}
+      css/regions/breadcrumb.css: {}
+      css/regions/content-blog.css: {}
+      css/pages/blog.css: {}
+      css/pages/portfolio.css: {}
+      css/screen-small.css: {}
+      css/screen-medium.css: {}
+      css/screen-large.css: {}
+      css/slick.css: {}
+      css/slick-theme.css: {}
+    component:
+      css/components/block.css: {}
+      css/components/slick-custom.css: {}
+      css/components/modal.css: {}
+bizpage-scripting:
+  version: 1.x
+  js:
+    js/bizpage.js: { }
+    js/slick.js: { }
+  dependencies:
+    - core/jquery

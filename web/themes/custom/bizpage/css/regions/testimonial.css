@@ -1,0 +1,90 @@
+/*=============================== Testimonials ===============================*/
+.region-testimonial{
+  background-color: var(--white-dark);
+}
+
+.testimonial-wrapper{
+  width: 95%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.testimonial-list li {
+  padding: 1rem 0;
+}
+
+.testimonial-list li div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-list li .views-field-title span{
+  font-size: 24px;
+  color: #333;
+  font-weight: bolder;
+}
+
+.testimonial-list li .views-field-field-testimonial-job{
+  color:  var(--white-darker);
+}
+
+.testimonial-list li .views-field-body p{
+  text-align: center;
+  display: flex;
+  align-items: end;
+}
+
+.testimonial-list li > div{
+  padding: .75rem 0;
+}
+.views-field-field-testimonial-avatar .field-content{
+  width: 85px;
+  height: 85px;
+  border-radius: 100%;
+  background-color: var(--white-light);
+  padding: .35rem;
+
+}
+.views-field-field-testimonial-avatar img{
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+/* for users refs*/
+.testimonial-list li .views-field-name span{
+  font-size: 24px;
+  color: #333;
+  font-weight: bolder;
+}
+
+.testimonial-list li .views-field-roles-target-id{
+  color:  var(--white-darker);
+}
+
+.testimonial-list li .views-field-field-quote p{
+  text-align: center;
+  display: flex;
+  align-items: end;
+}
+
+.testimonial-list li > div{
+  padding: .75rem 0;
+}
+.testimonial-list li .views-field-user-picture .field-content{
+  width: 85px;
+  height: 85px;
+  border-radius: 100%;
+  background-color: var(--white-light);
+  padding: .35rem;
+
+}
+.testimonial-list li .views-field-user-picture img{
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}

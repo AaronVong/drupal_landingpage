@@ -1,0 +1,98 @@
+.fade {
+  animation-name: fade;
+  animation-duration: var(--duration-xl);
+}
+
+@keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+
+.reset-button {
+  border: none;
+  outline-width: unset;
+  background-color: unset;
+}
+
+.reset-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.is-active {
+  color: var(--green-light) !important;
+}
+
+.myblock {
+  height: 100vh;
+  border: 1px solid var(--black-dark);
+}
+
+.hide {
+  display: none;
+}
+
+.menu--main--layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(51, 51, 51, 0.6);
+}
+
+.hide-slide-content{
+  transition: transform var(--timing-normal) var(--duration-xl), opacity var(--timing-normal) var(--duration-xl);
+  opacity: 0;
+  transform: translateY(200px);
+}
+.show-slide-content {
+  transform: translate(0,0) !important;
+  opacity: 1 !important;
+}
+
+.slide-up{
+  transform: translate(0,0) !important;
+  opacity: 1 !important;
+}
+
+.parallax-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  filter: opacity(20%) blur(2px);
+}
+
+.not-front--nav{
+  position: static !important;
+  background-color: var(--black-dark) !important;
+  width: 100% !important;
+}
+
+.jumbotron{
+  position: relative;
+  width: 100%;
+  padding: 3rem;
+  text-align: center;
+  background-color: var(--white-darker);
+  color: var(--white-dark);
+  font-size: 26px;
+}
+
+.jumbotron:before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 80%;
+  background-color: var(--green-light);
+}

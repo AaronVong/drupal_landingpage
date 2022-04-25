@@ -1,0 +1,33 @@
+/*
+* Custom style for custom block and h2 in REGION
+*/
+.region > .block-block-content{
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1rem 0.75rem;
+}
+
+.region > .block-block-content > h2:first-child{
+  font-size: 35px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  padding: 1rem 0;
+  position: relative;
+  border-bottom: 1px solid var(--white-darker);
+  text-transform: uppercase;
+}
+
+.region > .block-block-content > h2:first-child:before{
+  content: "";
+  position: absolute;
+  bottom: -3%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 5px;
+  background-color: var(--green-light);
+}

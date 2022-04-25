@@ -1,0 +1,45 @@
+/*=============================== Service ===============================*/
+.region-service{
+  background-color: var(--white-light);
+}
+.service-wrapper{
+
+}
+.service-list{
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+}
+
+.service-list .service-item .node-service-content{
+  display: grid;
+  grid-template-areas:
+  "icon title title"
+  "icon content content";
+}
+
+.service-list .service-item .field_service_icon{
+  grid-area: icon;
+}
+.service-list .service-item .node-service-title{
+  grid-area: title;
+}
+.service-list .service-item .node-service-title a{
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 25px;
+  color: #333;
+  transition: color linear 300ms;
+}
+.service-list .service-item .node-service-content:hover a{
+  color: var(--green-light);
+}
+.service-list .service-item .node-service-content .body{
+  grid-area: content;
+}
+.service-list .service-item .node-service-content .body p{
+  color: var(--white-darker);
+}
+.service-list .service-item .node-service-content > div{
+  padding: .25rem;
+}

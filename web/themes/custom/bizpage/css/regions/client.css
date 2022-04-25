@@ -1,0 +1,22 @@
+/*=============================== Clients ===============================*/
+.region-client{
+  background-color: var(--white-dark);
+}
+
+.client-wrapper{
+  width: 95%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.client-list li img{
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  transition: opacity var(--timing-normal) var(--duration-s);
+}
+
+.client-list li img:hover{
+  opacity: 1;
+}

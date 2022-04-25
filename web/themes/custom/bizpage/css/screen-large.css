@@ -1,0 +1,168 @@
+/*===============================* Media Large Screen ===============================*/
+@media only screen and (min-width: 1024px){
+  /*=============== Navigation ===============*/
+  .primary-menu-container {
+    /*top: 35px;*/
+  }
+
+  .menu-toggle-target{
+    display: none;
+  }
+  .site-branding{
+    flex-basis: 20%;
+  }
+
+  .navigation{
+    flex-basis: calc(100% / 2);
+  }
+  .menu--account .content > .menu{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu--main .content > .menu {
+    padding: unset;
+    position: static;
+    top: 100%;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    display: flex !important;
+    flex-direction: row;
+    background-color: unset !important;
+  }
+
+  .navigation .content .menu .menu-item{
+    height: 100%;
+    padding: unset !important;
+    overflow-y: unset !important;
+  }
+
+  .navigation .content .menu .menu-item a{
+    align-items: center !important;
+  }
+
+  .menu--main .menu .menu-item--expanded ul{
+    display: none !important;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    row-gap: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width:max-content !important;
+    height: auto !important;
+    background-color: var(--black-dark);
+  }
+
+  .menu--main .menu .menu-item--expanded ul li{
+    width: 100%;
+    height: 100%;
+  }
+  .menu--main .menu .menu-item--expanded ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: .75rem 1rem;
+  }
+  .menu--main .menu .menu-item--expanded ul ul{
+    top: 0;
+    left: calc(100%);
+  }
+
+  .menu--main .menu .menu-item--expanded:hover > ul{
+    display: flex !important;
+  }
+  /*=============== About section ===============*/
+  .about-list {
+    width: 60%;
+    max-width: 65%;
+    gap:1rem;
+  }
+
+  /*=============== Service section ===============*/
+  .service-list{
+    width: 80%;
+    max-width: 85%;
+    margin: 0 auto;
+  }
+
+  /*=============== Skill section ===============*/
+  .skill-list {
+    width: 80%;
+    max-width: 85%;
+    margin: 0 auto;
+  }
+
+  /*=============== Portfolio  ===============*/
+  .portfolio-list{
+    grid-template-columns: repeat(3,1fr);
+    width: 60%;
+    max-width: 65%;
+  }
+  .portfolio-list li{
+
+  }
+
+  /*=============== Client  ===============*/
+  .client-wrapper{
+    width: 60%;
+    max-width: 65%;
+  }
+  /*=============== Testimonial  ===============*/
+  .testimonial-wrapper{
+    width: 60%;
+    max-width: 65%;
+  }
+
+  /*=============== Team  ===============*/
+  .team-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-rows: repeat(1, 300px);
+  }
+
+  /*=============== Footer  ===============*/
+  .site-footer__top{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer .region .block-block-content{
+    padding: 1rem 0.15rem;
+  }
+
+  /*=============== Blog  ===============*/
+  .blog-page-wrapper{
+    flex-direction: row;
+  }
+  .blog-section{
+    width: 60%;
+  }
+  .sidebar-section{
+    width: 40%
+  }
+
+  .blog-section .blog-wrapper{
+    width: 70%;
+    margin: 0 auto;
+  }
+  .region-sidebar{
+    width: 70%;
+    margin: 0 auto;
+  }
+  /*========== Portfolio page ======================*/
+
+  .node-portfolio-content{
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    width: 80%;
+    max-width: 85%;
+  }
+}

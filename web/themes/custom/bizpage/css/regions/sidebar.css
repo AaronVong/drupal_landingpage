@@ -1,0 +1,65 @@
+.region-sidebar div.block-views{
+  padding: 1rem;
+}
+.region-sidebar h2{
+ font-size: 19px;
+  padding: .5rem 0;
+}
+
+.taxonomy--categories-list, .taxonomy--tags-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.taxonomy--categories-list{
+  flex-direction: column;
+}
+.taxonomy--categories-list li, .taxonomy--tags-list li{
+  width: max-content;
+}
+
+.taxonomy--categories-list li a,  .taxonomy--tags-list li a{
+  color:  var(--white-darker);
+  font-size: 16px;
+}
+
+.taxonomy--tags-list li a{
+  display: block;
+  border: 1px solid var(--green-light);
+  padding: .75rem;
+  border-radius: 25px;
+  transition: color var(--timing-normal) var(--duration-s), background-color var(--timing-normal) var(--duration-s);
+}
+.taxonomy--tags-list li a:hover{
+  background-color: var(--green-light);
+  color: var(--white-light);
+}
+
+
+.region-sidebar .blog-list{
+  flex-direction: column;
+}
+
+.region-sidebar .blog-item{
+  box-shadow: unset;
+  display: grid;
+  grid-template-areas:
+    "blog-img blog-title blog-title"
+    "blog-img blog-date blog-date";
+  width: 100%;
+}
+.region-sidebar .blog-item .views-field-created{
+  grid-area: blog-date;
+}
+.region-sidebar .blog-item .views-field-title{
+  grid-area: blog-title;
+}
+.region-sidebar .blog-item .views-field-field-blog-image{
+  grid-area: blog-img;
+  width: 100px;
+  height: auto;
+  align-self: center;
+}
+.region-sidebar .blog-item .views-field-field-blog-image img{
+  border-radius: unset;
+}

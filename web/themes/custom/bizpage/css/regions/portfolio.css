@@ -1,0 +1,109 @@
+/*===============================* Portfolio ===============================*/
+/* Same as "About Us" Section */
+ #portfolio{
+  width: 100%;
+  height: 100%;
+  padding: 0.75rem 1rem;
+}
+.region-portfolio{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.views-field-field-portfolio-type{
+  /*display: none;*/
+}
+
+.portfolio-types-list, .block-views-blockportfolios-block-1 .form-radios{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap:1rem;
+}
+.portfolio-types-list li span,
+.block-views-blockportfolios-block-1 .form-radios label{
+  display: inline-block;
+  color: var(--white-darker);
+  background-color: var(--white-dark);
+  border-radius: 5px;
+  padding: .75rem 1.25rem;
+  cursor: pointer;
+  transition: background-color var(--timing-normal) var(--duration-s), color var(--timing-normal) var(--duration-s);
+}
+.portfolio-types-list li span:hover,
+.block-views-blockportfolios-block-1 .form-radios label:hover{
+  color: var(--white-light);
+  background-color: var(--green-light);
+}
+
+.block-views-blockportfolios-block-1 .form-radios input[type="radio"]{
+  display: none;
+}
+
+.portfolio-active span,
+.portfolio-active label{
+  color: var(--white-light) !important;
+  background-color: var(--green-light) !important;
+}
+
+.portfolio-list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 0 .25rem;
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.portfolio-list li{
+  border-radius: 5px;
+  position: relative;
+  background-color: white;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: repeat(4, auto);
+  transition: transform linear 800ms, opacity linear 800ms;
+  /*opacity: 0;*/
+  /*transform: translateY(200px);*/
+  box-shadow: 1px 1px 6px 1px #aaa;
+}
+
+.portfolio-list li .views-field:nth-child(n+3){
+  padding: .75rem;
+}
+
+.portfolio-list li .views-field-field-portfolio-image img{
+  /* about image */
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.portfolio-list li .views-field-title .field-content{
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.portfolio-list li .views-field-title .field-content a{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 28px;
+  color: #333;
+  font-weight: bolder;
+  transition: color linear 400ms;
+  padding: 1rem 0;
+}
+
+.portfolio-list li .views-field-title .field-content a:hover {
+  color: #2d7;
+}

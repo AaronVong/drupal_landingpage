@@ -1,0 +1,134 @@
+<?php
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+use Drupal\views\Form\ViewsForm;
+
+
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function bizpage_preprocess_region__contactform(&$variables)
+{
+//  $form = \Drupal::formBuilder()->getForm('\Drupal\landing_page_form_module\Form\LandingPageContactForm');
+//  $variables['landing_page_contact_form'] = $form;
+}
+
+/**
+ * Implements hook_preprocess().
+ */
+function bizpage_preprocess_region__footer_fourth(&$variables, $hook)
+{
+  $form = \Drupal::formBuilder()->getForm("\Drupal\landing_page_subscribe_module\Form\LandingPageSubscribe");
+  $variables['subscribe_form'] = $form;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function bizpage_preprocess_page__front(&$variables)
+{
+  $path = \Drupal::service('path.current')->getPath();
+  $alias = \Drupal::service('path_alias.manager')->getAliasByPath($path);
+  $isBlog = strripos($alias, "/blog") === false ? false : true;
+  $isPortfolioPage = strripos($alias, "/portfolio") === false ? false : true;
+  $variables["isBlogPage"] = $isBlog;
+  $variables['isPortfolioPage']= $isPortfolioPage;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function bizpage_preprocess_node__skill(&$variables)
+{
+  $hideLabel = true;
+  $variables['hideLabel'] = $hideLabel;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function bizpage_preprocess_field(&$variables)
+{
+  # Enable custom wrapper
+  $variables['needWrapper'] = false;
+
+  # Field name
+  $field_name = $variables['element']['#field_name'];
+
+  # Slide up animation Class
+  $variables['slideUpAnimation'] = '';
+  /**
+   * Adding classes abd option depend on field name
+   */
+
+  if($field_name == 'field_fact_contents') {
+    $variables['needWrapper'] = true;
+    $variables['wrapperCls'] = 'fact-wrapper';
+    $variables['listCls'] = 'fact-list';
+    $variables['itemCls'] = 'fact-item';
+  }
+  if($field_name == 'field_skill_contents'){
+    $variables['needWrapper'] = true;
+    $variables['wrapperCls'] = 'skill-wrapper';
+    $variables['listCls'] = 'skill-list';
+    $variables['itemCls'] = 'skill-item';
+  }
+
+  if($field_name == 'field_about_contents') {
+    $variables['needWrapper'] = true;
+    $variables['wrapperCls'] = 'about-wrapper';
+    $variables['listCls'] = 'about-list';
+    $variables['itemCls'] = 'about-item';
+    $variables['slideUpAnimation'] = 'hide-slide-content';
+  }
+
+  if($field_name == 'field_service_contents') {
+    $variables['needWrapper'] = true;
+    $variables['wrapperCls'] = 'service-wrapper';
+    $variables['listCls'] = 'service-list';
+    $variables['itemCls'] = 'service-item';
+    $variables['slideUpAnimation'] = 'hide-slide-content';
+  }
+
+  if($field_name == 'field_feature_contents') {
+    $variables['needWrapper'] = true;
+    $variables['slideUpAnimation'] = '';
+    $variables['wrapperCls'] = 'feature-wrapper';
+    $variables['listCls'] = 'feature-list';
+    $variables['itemCls'] = 'feature-item';
+  }
+
+  if($field_name == 'field_portfolio_images') {
+    $variables['slideUpAnimation'] = '';
+    $variables['listCls'] = 'portfolio-images-list';
+    $variables['itemCls'] = 'portfolio-images-item';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function bizpage_preprocess_node(&$variables)
+{
+  $node = $variables["node"];
+  $nodeType = $node->getType();
+  $variables['linkToContent'] = true;
+  $variables['originContent'] = true;
+  $variables['nodeType'] = $nodeType;
+  if($nodeType == 'fact' || $nodeType == 'hero_slide') {
+    $variables['linkToContent'] = false;
+  }
+}
+
+function bizpage_theme_suggestions_page_alter(array &$suggestions, &$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if($node) {
+    $bundle = $node->bundle();
+    if($bundle == 'portfolio' || $bundle == 'blog') {
+      array_unshift($suggestions, 'page__'. $bundle);
+    }
+  }
+}
+?>

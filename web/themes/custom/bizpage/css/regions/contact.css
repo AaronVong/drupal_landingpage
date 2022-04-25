@@ -1,0 +1,84 @@
+/*===============================* Contact ===============================*/
+.region-contactform{
+  padding: 1rem 0;
+}
+
+.contact-wrapper{
+  width: 80%;
+  max-width: 85%;
+  margin: 0 auto;
+}
+.contact-list{
+  padding: 1rem;
+}
+.contact-list, .contact-list li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:1rem;
+}
+
+.contact-list li .views-field-title span{
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: capitalize;
+  color: var(--white-darker);;
+}
+/*===============================* Contact WebForm ===============================*/
+.region-contactform #block-webform-2 form{
+  width: 80%;
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: var(--white-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.region-contactform #block-webform-2 form div{
+  max-width: 100%;
+}
+.region-contactform #block-webform-2 form input, .region-contactform #block-webform-2 form textarea{
+  width:100% ;
+  border: unset;
+  outline-width: unset;
+  padding: .75rem 1rem;
+  border: 1px solid var(--white-darker);
+  background-color: unset;
+}
+
+.region-contactform #block-webform-2 form input:focus-visible, .region-contactform #block-webform-2 form textarea:focus-visible
+{
+  outline-color: var(--green-light);
+}
+
+.form-item-subject, .form-item-message, .submit-wrapper, .region-contactform #block-webform-2 form .form-actions{
+  grid-column: 1 / span 2;
+}
+.submit-wrapper, .region-contactform #block-webform-2 form .form-actions{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-wrapper input,
+.region-contactform #block-webform-2 form .form-actions input[type='submit']{
+  width: unset !important;
+  border: none !important;
+  cursor: pointer;
+  background-color: var(--green-light);
+  color: var(--white-light);
+  transition: background-color var(--timing-normal) var(--duration-s);
+}
+
+.submit-wrapper input:hover,
+.region-contactform #block-webform-2 form .form-actions input[type='submit']:hover
+{
+  background-color: var(--green-dark);;
+}
+
+

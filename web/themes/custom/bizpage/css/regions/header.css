@@ -1,0 +1,93 @@
+/* ================= Header ================= */
+.region-header .contextual-region {
+  position: static;
+}
+
+#header{
+  height: fit-content;
+}
+
+/* ================= Header - Hero Carousel  ================= */
+.node-landing_page-content{
+  height: 100%;
+}
+.field_hero_carousel{
+  max-width: 100%;
+  position: relative;
+  height: 100vh;
+}
+.field_hero_carousel li.slick-slide{
+  max-width: 100%;
+  height: 100vh;
+  min-height: unset;
+  position: relative;
+}
+.field_hero_carousel li article{
+  width: 100%;
+}
+.field_hero_carousel li  article  .node-hero_slide-content .group-carousel-content{
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  z-index: 1;
+}
+
+.field_hero_carousel  li  article  .node-hero_slide-content .body p{
+  padding: 1rem 0;
+  color: var(--white-darker);
+}
+
+.field_hero_carousel li article .node-hero_slide-content h2{
+  color: var(--white-dark);
+}
+.field_hero_carousel li article .node-hero_slide-content .body p a{
+  display: inline-block;
+  height: 100%;
+  text-decoration: none;
+  background-color: var(--green-light);
+  color: var(--white-light);
+  transition: color ease-out 400ms;
+  border-radius: 35px;
+  padding: .75rem 1.75rem;
+}
+
+.field_hero_carousel li article .node-hero_slide-content .body p a:hover{
+  background-color: var(--white-light);
+  color: var(--green-light);
+}
+
+.field_hero_carousel li article .node-hero_slide-content .body p{
+  transition: transform ease-in-out 800ms;
+}
+
+.field_hero_carousel li article .node-hero_slide-content .field_image, .field_hero_carousel li article .node-hero_slide-content .field_image img{
+  display: block;
+  max-width: 100%;
+}
+
+.field_hero_carousel li article .node-hero_slide-content .field_image img {
+  filter: brightness(60%);
+  height: auto;
+}
+
+.field_hero_carousel .slick-next,.field_hero_carousel .slick-prev{
+  width: 50px;
+  height: 50px;
+}
+.field_hero_carousel .slick-next {
+  right: 50px;
+
+}
+.field_hero_carousel .slick-prev {
+  left: 50px;
+}
+
+.field_hero_carousel .slick-arrow:before{
+  font-size: 40px;
+}
+
+.field_hero_carousel .slick-dots--custom {
+  position: absolute;
+   bottom: 25px;
+}

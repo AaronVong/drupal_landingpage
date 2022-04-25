@@ -1,0 +1,141 @@
+/* ================= Primary Menu ================= */
+.primary-menu-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: var(--black-dark);
+  width: 100%;
+  height: 45px;
+  min-height: 50px;
+  transition: background-color linear 300ms;
+}
+
+.region-primary-menu {
+  height: 100%;
+  padding: 0 1.25rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.region-primary-menu .contextual-region {
+  position: static !important;
+}
+
+/* ================= Primary Menu - Navigation ================= */
+.navigation {
+  flex-basis: calc(65% / 2);
+  max-width: 100%;
+  height: 100%;
+  flex-shrink: 1;
+}
+
+.navigation .content {
+  /* Container of menu-toggle and menu*/
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  height: 100%;
+}
+
+.site-branding {
+  flex-basis: 35%;
+  flex-shrink: 0;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.site-branding__text .site-branding__name a {
+  font-size: 24px;
+  text-decoration: none;
+  color: var(--white-dark);
+  font-weight: bold;
+}
+
+.menu-toggle-target {
+  transition: color ease-in-out 200ms;
+  background-color: white;
+  cursor: pointer;
+  padding: 0.75rem;
+  color: var(--black-light);
+}
+
+.navigation .content .menu{
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.navigation .content .menu .menu-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: max-content;
+  gap: .75rem;
+}
+
+.navigation .content .menu .menu-item a {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width :100%;
+  height: 100%;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--white-dark);
+  transition: color ease-in-out 200ms;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.navigation .content .menu .menu-item a:hover {
+  color: var(--green-light);
+}
+
+.menu--account .content > .menu{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 0.75rem;
+  flex-direction: column;
+  height: 100%;
+}
+.menu--main .content > .menu {
+  gap: 1rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100% !important;
+  height: 90vh;
+  flex-direction: column;
+  align-items: start;
+  display: none;
+  background-color: var(--black-dark);
+}
+
+.menu--main .content > .menu li{
+  padding: .25rem 1rem;
+}
+
+.menu--main .menu .menu-item--expanded .dropdown-icon{
+  color: var(--white-darker);
+  padding: 0 .25rem;
+}
+.menu--main .menu .menu-item--expanded{
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+.menu--main .menu .menu-item--expanded .menu{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 0;
+  transition: height linear 300ms;
+  gap: .75rem;
+}

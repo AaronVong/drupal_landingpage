@@ -1,0 +1,64 @@
+/*===============================* Media Small Screen ===============================*/
+@media only screen and (min-width: 640px){
+  /*=============== Feature  ===============*/
+  .feature-wrapper{
+    width: 90%;
+  }
+  .about-list{
+    align-items: center;
+  }
+
+  .about-list li, .portfolio-list li{
+    max-width: 400px;
+  }
+
+  /*=============== Service  ===============*/
+  .service-list{
+    width: 85%;
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+  }
+
+  /*=============== Skills  ===============*/
+  .skill-list {
+    width: 85%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /*=============== Portfolio  ===============*/
+  .portfolio-list{
+    justify-content: center;
+    align-items: center;
+  }
+  /*=============== Client  ===============*/
+  .client-wrapper{
+    width: 90%;
+    max-width: 95%;
+  }
+
+  /*=============== Testimonials  ===============*/
+  .testimonial-wrapper{
+    width: 90%;
+    max-width: 95%;
+  }
+
+  /*=============== Team  ===============*/
+
+  .team-list{
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(auto-fill, 300px);
+  }
+
+  /*=============== Blog  ===============*/
+  .blog-section{
+    width: 80%
+  }
+  .sidebar-section{
+    width: 80%
+  }
+}

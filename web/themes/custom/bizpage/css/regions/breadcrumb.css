@@ -1,0 +1,15 @@
+.region-breadcrumb{
+  width: 100%;
+  background-color: var(--white-dark);
+  padding: .75rem 1rem;
+}
+
+.region-breadcrumb #block-breadcrumbs nav > ol li a{
+  color: var(--green-light);
+  font-size: 18px;
+}
+
+#block-pagetitle h1{
+  font-weight: lighter;
+  color: var(--white-darker);
+}

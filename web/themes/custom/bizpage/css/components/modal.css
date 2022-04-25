@@ -1,0 +1,15 @@
+.ajax-message{
+  order: 3;
+}
+
+.ajax-message-content{
+  padding: 1rem;
+}
+
+.subscribe-message--error{
+  color: red;
+}
+
+.subscribe-message--success{
+  color: var(--green-dark);
+}

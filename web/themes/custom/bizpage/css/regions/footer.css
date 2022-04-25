@@ -1,0 +1,133 @@
+/*===============================* Footer Section ===============================*/
+.footer{
+  background-color: var(--black-dark);
+}
+
+.footer .region .block-block-content{
+  justify-content: start !important;
+  align-items: start;
+}
+.footer .region .block-block-content p{
+  text-align: start;
+  color: var(--white-light);
+}
+.site-footer__top{
+  display: flex;
+  flex-direction: column;
+  padding: .25rem 1rem;
+}
+
+.footer .region .block-block-content h2{
+  color: var(--white-light);
+  font-size: initial;
+  letter-spacing: normal;
+  width: 100%;
+}
+.footer .region .block-block-content h2:before{
+  left: 0;
+  width: 15%;
+  height: 2px;
+  transform: translateX(0);
+}
+
+.footer .region #block-landingpage h2{
+  border-bottom: unset;
+  padding: .75rem 1rem;
+}
+
+.footer .region #block-landingpage h2:before{
+  left: 0;
+  top: 50%;
+  width: 5px;
+  height: 100%;
+  transform: translate(0 ,-50%);
+}
+
+#block-usefullinks-2 > div{
+  width: 100%;
+}
+#block-usefullinks-2 > div:last-child ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--white-light);
+  width: 100%;
+}
+
+#block-usefullinks-2 > div:last-child ul li{
+  padding: .75rem;
+  border-bottom: 1px solid var(--white-darker);
+  width: 100%;
+}
+
+#block-usefullinks-2 > div:last-child ul li a{
+  color: var(--white-light);
+  transition: color var(--timing-normal) var(--duration-s);
+}
+
+#block-usefullinks-2 > div:last-child ul li a:hover{
+  color: var(--white-darker);
+}
+
+.linked-list{
+  display: flex;
+  gap: .75rem;
+}
+.linked-list .fontawesome-icon{
+  font-size: 25px;
+  color: var(--white-light);
+  background-color: var(--white-darker);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  transition: background-color linear 200ms;
+}
+
+.linked-list .fontawesome-icon:hover{
+  background-color: var(--green-light);
+}
+
+.site-footer__bottom{
+  border-top: 1px solid var(--white-darker);
+}
+.region-footer-fifth{
+
+}
+
+.region-footer-fifth .block-block-content div.body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+
+.landing-page-subscribe{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.landing-page-subscribe .form-item-email{
+  width: 50%;
+}
+.landing-page-subscribe input[type="email"]{
+  max-width: 100%
+}
+.landing-page-subscribe input{
+  padding: .75rem 1rem;
+}
+.landing-page-subscribe input[type="submit"]{
+  border: none;
+  outline-width: unset;
+  background-color: var(--green-light);
+  transition: background-color linear 200ms;
+  color: var(--white-light);
+}
+.landing-page-subscribe input[type="submit"]:hover{
+  background-color: var(--green-dark);
+}

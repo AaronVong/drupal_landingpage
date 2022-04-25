@@ -1,0 +1,80 @@
+.node-portfolio-content{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.portfolio-images-list{
+  max-width: 400px;
+
+}
+.portfolio-images-list li.portfolio-images-item{
+  max-width: 100%;
+  height: 100%;
+}
+
+.portfolio-images-list li.portfolio-images-item img{
+  display: block;
+  max-width: 100%;
+  height: 100%;
+}
+
+.portfolio-images-list{
+  width: 100%;
+}
+.portfolio-right{
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  justify-content: center;
+  width: 70%;
+  min-width: 75%;
+}
+.portfolio-right-top{
+  background-color: var(--white-dark);
+  box-shadow: 1px 1px 2px 2px var(--white-darker);
+  padding: 1rem;
+  color: var(--black-light);
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.portfolio-info{
+  font-size: 23px;
+  padding: .75rem;
+  font-weight: bold;
+}
+
+.portfolio-right-top > div, .portfolio-right-bottom .body{
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.portfolio-right-top > div > div:first-child{
+  font-weight: bold;
+}
+.portfolio-right-top > div > div{
+  text-transform: capitalize;
+}
+.portfolio-right-bottom .body{
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.portfolio-right-bottom .body h2,.portfolio-right-bottom .body p{
+  padding: .75rem 0;
+}
+.portfolio-right-bottom .body h2{
+  font-size: 25px;
+}
+.portfolio-right-bottom .body p{
+  color: var(--white-darker)
+}
+
+

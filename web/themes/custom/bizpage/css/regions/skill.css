@@ -1,0 +1,45 @@
+/*=============================== Skills ===============================*/
+.skill-wrapper{
+  width: 100%;
+}
+.region-skill{
+  padding: 2rem 0;
+}
+.skill-list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  padding: .75rem;
+  width: 100%;
+}
+
+.skill-list li.skill-item{
+  background-color: rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.skill-list li.skill-item .node-skill-content{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: .45rem 1rem;
+  z-index: 2;
+}
+
+.skill-list li.skill-item .node-skill-content div:nth-child(2){
+  color: var(--black-light);
+}
+
+.skill-list li.skill-item .percent-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: width var(--timing-normal) var(--duration-l);
+}
+
+.contextual-links li{
+  position: relative;
+}

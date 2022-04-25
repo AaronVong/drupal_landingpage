@@ -1,0 +1,31 @@
+name: BizPage Landing Page
+type: theme
+description: Build landing page
+core_version_requirement: ^9.1
+base theme: false
+libraries:
+  - bizpage/bizpage-styling
+  - bizpage/bizpage-scripting
+regions:
+  primary_menu: 'Primary menu'
+  header: 'Header'
+  breadcrumb: "Breadcrumb"
+  sidebar: "Sidebar"
+  feature: 'Feature'
+  about: 'About'
+  service: 'Service'
+  action: "Action"
+  skill: 'Skill'
+  fact: 'Fact'
+  portfolio: 'Portfolio'
+  client: 'Client'
+  testimonial: 'Testimonial'
+  team: 'Team'
+  contactform: 'Contact Form'
+  content: 'Content'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'
+  footer_fifth: 'Footer fifth'
+screenshot: screenshot.png

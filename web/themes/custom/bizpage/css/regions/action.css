@@ -1,0 +1,35 @@
+.region-action{
+  position: relative;
+}
+
+.region-action .block-block-content  h2{
+  color: var(--white-light);
+}
+.region-action .parallax-bg{
+  background-image: url("../../images/call-to-action-bg.jpg");
+  filter: blur(0);
+}
+
+.region-action .block-block-content  p{
+  padding: 1rem;
+  color: white !important;
+  text-align: center;
+}
+.region-action .block-block-content  p a{
+  display: inline-block;
+  height: 100%;
+  text-decoration: none;
+  border: 1px solid var(--white-light);
+  background-color: unset;
+  color: var(--white-light);
+  transition: background-color ease-out 400ms;
+  border-radius: 35px;
+  padding: .75rem 1.75rem;
+  font-size: 22px;
+  text-transform: capitalize;
+}
+
+.region-action .block-block-content  p a:hover{
+  background-color: var(--green-light);
+  border-color: var(--green-light);
+}

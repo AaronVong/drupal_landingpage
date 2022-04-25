@@ -1,0 +1,60 @@
+/* ================= Features  ================= */
+.region-feature {
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(to bottom, var(--black-dark), var(--black-dark),var(--black-light),var(--black-dark), var(--black-dark));
+
+}
+.feature-wrapper{
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+}
+
+.feature-list{
+  display: flex;
+  flex-direction: column;
+  row-gap: .75rem;
+}
+
+.feature-list li{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap:1rem;
+  padding: .75rem;
+}
+.feature-list li .views-field {
+  max-width: 100%;
+  height: auto;
+}
+
+.feature-list li img{
+  max-width: unset;
+  width: 65px;
+  height: 65px;
+}
+
+.feature-list li  a, .feature-list li p{
+  color: var(--white-light);
+}
+
+.feature-list li a{
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  transition: color var(--timing-normal) var(--duration-s);
+}
+.feature-list li  a:hover{
+  color: var(--green-light);
+}
+
+.feature-list .feature-item h2{
+  border-bottom: none;
+}
+
+.feature-list .feature-item h2:before{
+  postion: static;
+  display: none;
+}

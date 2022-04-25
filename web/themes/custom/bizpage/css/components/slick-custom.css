@@ -1,0 +1,33 @@
+/*===============================* Slick custom ===============================*/
+.slick-dots--custom{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem;
+  padding: .75rem 0;
+}
+
+.slick-dots--custom li button{
+  border: 1px solid var(--green-light);
+  background-color:  unset;
+  outline-width: unset;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  padding: .25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: transparent;
+  font-size: 0;
+
+}
+.slick-active button{
+  background-color: var(--green-light) !important;
+}
+
+.slick-arrow, .slick-dots--custom{
+  z-index: 20;
+}

@@ -1,0 +1,50 @@
+/*=============================== Fact Section ===============================*/
+.region-fact{
+  position: relative;
+}
+
+.region-fact .parallax-bg{
+  background-image: url("../../images/facts-bg.jpg");
+}
+.fact-wrapper{
+  width: 100%;
+}
+
+.fact-list{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(auto-fill, auto);
+  gap: .75rem;
+}
+
+.fact-list li.fact-item article{
+  display: flex;
+  flex-direction: column;
+  row-gap:.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.fact-list li.fact-item .node-fact-content .field_fact_number{
+  font-size: 50px;
+  color: var(--green-light);
+  font-weight: bolder;
+
+}
+.fact-list li.fact-item .node-fact-content{
+  order: 1;
+}
+.fact-list li.fact-item h2{
+  order: 2;
+}
+.fact-list li.fact-item h2 span{
+  color: var(--white-darker);
+}
+#block-factimage div{
+  padding: 1rem 2rem;
+}
+#block-factimage img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
