@@ -1,0 +1,4 @@
+name: Landing Page Subscribe Module
+type: module
+core_version_requirement: ^9.1
+description: 'Landing Page Subscribe Module'

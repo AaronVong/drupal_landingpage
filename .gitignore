@@ -50,7 +50,8 @@ web/themes/custom/landingpage
 web/modules/custom/advertiser
 web/modules/custom/example_resource
 web/modules/custom/foobar
-web/modules/custom//testapi
+web/modules/custom/testapi
 
+web/modules/contrib
 # Ignore idea folder
 .idea

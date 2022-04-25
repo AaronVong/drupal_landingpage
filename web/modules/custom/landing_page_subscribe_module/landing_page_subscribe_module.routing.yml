@@ -1,0 +1,7 @@
+landing_page_subscribe_module.report:
+  path: '/admin/reports/subscribe-list'
+  defaults:
+    _controller: '\Drupal\landing_page_subscribe_module\Controller\ReportController::report'
+    _title: 'List of Subscribed client'
+  requirements:
+    _permission: 'view landing_page_subscribe_module'

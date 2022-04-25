@@ -1,0 +1,35 @@
+<?php
+/**
+ * @return array
+ * Implement hook_schema()
+ */
+
+function landing_page_subscribe_module_schema(){
+  $schema = [];
+  $schema['subscribelist'] = [
+    'description' => 'Store email that subscribe to page',
+    'fields' => [
+      'id' => [
+        'description' => "The primary key for the record",
+        'type' => 'serial',
+        'unsigned' => true,
+        'not null' => true,
+      ],
+      'email' => [
+        'description' => 'email that subscribed to page',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => true,
+        'default' => '',
+      ],
+      'created' => [
+        'type' => 'int',
+        'not null' => true,
+        'default' => 0,
+        'description' => 'Timestamp for when rsvp was created',
+      ]
+    ],
+    'primary key' => ['id'],
+  ];
+  return $schema;
+}

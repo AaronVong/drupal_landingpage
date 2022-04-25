@@ -1,0 +1,6 @@
+landing_page_subscribe_module.report:
+  title: 'List of subscribed'
+  description: 'View listing of client subscribed'
+  route_name: landing_page_subscribe_module.report
+  parent: system.admin_reports
+  weight: 10

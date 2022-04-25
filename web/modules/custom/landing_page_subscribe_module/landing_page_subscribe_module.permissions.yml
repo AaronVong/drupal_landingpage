@@ -1,0 +1,10 @@
+view landing_page_subscribe_module:
+  title: 'View Subscribe form'
+  description: 'View and submit the Subscribe form'
+access landing_page_subscribe_module report:
+  title: 'Access List of Subscriber'
+  description: 'View the report listing all client subscribed'
+administer landing_page_subscribe_module:
+  title: 'Administer Subscribe Module Settings'
+  description: 'Access the Subscribe module settings page.'
+  restrict access: true

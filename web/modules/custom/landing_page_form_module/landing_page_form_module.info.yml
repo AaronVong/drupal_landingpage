@@ -1,0 +1,4 @@
+name: Landing Page Contact Form
+type: module
+core_version_requirement: ^9.1
+description: 'Landing Page Contact Form Module'

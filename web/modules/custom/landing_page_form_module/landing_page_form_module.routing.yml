@@ -1,0 +1,7 @@
+landing_page_form_module.landing_page_contact_form:
+  path: "/test/form"
+  defaults:
+    _form: '\Drupal\landing_page_form_module\Form\LandingPageContactForm'
+    _title: "LandingPageContactForm"
+  requirements:
+    _permission: "access content"
