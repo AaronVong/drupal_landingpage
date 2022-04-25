@@ -51,3 +51,5 @@ modules/custom/advertiser
 modules/custom/example_resource
 modules/custom/foobar
 modules/custom//testapi
+
+~/vendor/
