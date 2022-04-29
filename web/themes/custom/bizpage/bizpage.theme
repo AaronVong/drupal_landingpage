@@ -105,6 +105,14 @@ function bizpage_preprocess_field(&$variables)
     $variables['listCls'] = 'portfolio-images-list';
     $variables['itemCls'] = 'portfolio-images-item';
   }
+
+  if($field_name == 'field_hero_carousel') {
+    $variables['needWrapper'] = true;
+    $variables['wrapperCls'] = 'hero-carousel-wrapper';
+    $variables['slideUpAnimation'] = '';
+    $variables['listCls'] = 'hero-carousel-list';
+    $variables['itemCls'] = 'hero-carousel-item';
+  }
 }
 
 /**

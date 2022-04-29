@@ -4,7 +4,8 @@ const primaryMenu = document.querySelector(".menu--main .content .menu");
 const menuLayer = document.querySelector(".menu--main--layer");
 const heroCarouselLeftControl = document.querySelector(".carousel-control--left");
 const heroCarouselRightControl = document.querySelector(".carousel-control--right");
-const heroCarouselSlides = document.getElementsByClassName("carousel-slide");
+const heroCarouselSlides = document.querySelectorAll(".hero-carousel-item");
+const heroCarouselImage = document.querySelectorAll(".hero-carousel-image");
 const heroCarouselDots = document.getElementsByClassName("carousel-dot");
 const heroCarouselSlideContents = document.querySelectorAll(".hero-carousel .carousel-slide .views-field-body .field-content p");
 const expandDropdownMenuBtn = document.querySelectorAll(".menu--main .menu .menu-item--expanded");
@@ -40,6 +41,33 @@ let numberObserver = new IntersectionObserver((entries, observer)=>{
   })
 },{...IO_OPTIONS, rootMargin: "0px"});
 
+function plusSlides(n) {
+  showSlides(carouselCounter += n);
+}
+
+function showSlides(n) {
+  if(heroCarouselSlides.length === 0) return;
+  let i;
+  if (n > CAROUSEL_LENGTH) {carouselCounter = 1}
+  if (n < 1) {carouselCounter = CAROUSEL_LENGTH}
+  for (i = 0; i < CAROUSEL_LENGTH; i++) {
+    heroCarouselSlides[i].style.display = "none";
+  }
+  for (i = 0; i < CAROUSEL_LENGTH; i++) {
+    heroCarouselDots[i].classList.remove("carousel-dot--active");
+  }
+  heroCarouselDots[carouselCounter-1].classList.add("carousel-dot--active");
+
+  heroCarouselSlides[carouselCounter-1].style.display = "block";
+}
+
+heroCarouselLeftControl.addEventListener("click", () => {
+  plusSlides(-1);
+})
+
+heroCarouselRightControl.addEventListener("click", () => {
+  plusSlides(1);
+})
 /* Change navigation background on scroll */
 function changeNavigationBg(){
   return;
@@ -233,16 +261,20 @@ jQuery(document).ready(()=>{
     console.log("submitted");
   })
 
-  jQuery(".node-landing_page-content > ul.field_hero_carousel").slick({
-    ...BASIC_SLICK_OPTIONS,
-    arrows: true,
-    draggable: false,
-    swipe: false,
-    variableHeight: true,
-    centerMode: false,
-    appendArrows: "ul.field_hero_carousel",
-    appendDots: "ul.field_hero_carousel",
-  })
+  /**
+   * Get data-src from hero-carousel slide and applying it to <div>
+   */
+
+  heroCarouselImage.forEach((item,index)=>{
+    item.style.backgroundImage = `url(${item.dataset['src']})`;
+    /**
+     * Init slide show when finish loop
+     */
+    if(index+1 >= CAROUSEL_LENGTH) {
+      showSlides(carouselCounter)
+    }
+  });
+
 })
 
 

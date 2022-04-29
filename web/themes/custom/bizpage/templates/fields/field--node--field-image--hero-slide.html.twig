@@ -44,21 +44,7 @@
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
-{% if needWrapper %}
-  <div class="{{ wrapperCls }}">
-{% endif %}
-  <ul {{ attributes.addClass([field_name, listCls]) }}>
-    <button class="carousel-control carousel-control--left" type="button">Prev</button>
-    {% for item in items %}
-      <li{{ item.attributes.addClass([itemCls, slideUpAnimation, 'fade']) }}>{{ item.content }}</li>
-    {% endfor %}
-    <button class="carousel-control carousel-control--right" type="button">Next</button>
-    <div class="carousel-dots">
-      {% for i in 0..items|length-1 %}
-        <div class="carousel-dot"></div>
-      {% endfor %}
-    </div>
-  </ul>
-{% if needWrapper %}
-  </div>
-{% endif %}
+{#This only use for hero carousel#}
+{% for item in items %}
+  <div class="{{ filed_name }} parallax-bg hero-carousel-image" data-src="{{ file_url(item['content']['#item'].entity.fileuri) }}"></div>
+{% endfor %}

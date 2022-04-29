@@ -2,92 +2,112 @@
 .region-header .contextual-region {
   position: static;
 }
-
-#header{
-  height: fit-content;
+/* ================= Header - Hero Carousel  ================= */
+.hero-carousel-wrapper{
+  height: 100vh;
+  border: 1px solid black;
 }
 
-/* ================= Header - Hero Carousel  ================= */
-.node-landing_page-content{
+.hero-carousel-list {
+  height: 100%;
+  width:100%;
+  position: relative;
+}
+
+.hero-carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.hero-carousel-item article {
   height: 100%;
 }
-.field_hero_carousel{
-  max-width: 100%;
-  position: relative;
-  height: 100vh;
-}
-.field_hero_carousel li.slick-slide{
-  max-width: 100%;
-  height: 100vh;
-  min-height: unset;
-  position: relative;
-}
-.field_hero_carousel li article{
+.hero-carousel-image {
   width: 100%;
-}
-.field_hero_carousel li  article  .node-hero_slide-content .group-carousel-content{
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -35%);
-  z-index: 1;
+  height: 100%;
+  z-index: -1;
 }
 
-.field_hero_carousel  li  article  .node-hero_slide-content .body p{
-  padding: 1rem 0;
+.hero-carousel-list .parallax-bg{
+  filter: brightness(50%);
+}
+
+.group-carousel-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.group-carousel-content h2{
+  font-size: 25px;
+}
+
+.group-carousel-content h2,.group-carousel-content .body p{
   color: var(--white-darker);
 }
 
-.field_hero_carousel li article .node-hero_slide-content h2{
-  color: var(--white-dark);
-}
-.field_hero_carousel li article .node-hero_slide-content .body p a{
+.group-carousel-content .body p a{
+  margin-top: 0.75rem;
   display: inline-block;
-  height: 100%;
-  text-decoration: none;
-  background-color: var(--green-light);
+  padding: .75rem 1rem;
   color: var(--white-light);
-  transition: color ease-out 400ms;
-  border-radius: 35px;
-  padding: .75rem 1.75rem;
+  background-color:var(--green-light);
+  transition: background-color var(--duration-s) var(--timing-normal);
 }
 
-.field_hero_carousel li article .node-hero_slide-content .body p a:hover{
-  background-color: var(--white-light);
-  color: var(--green-light);
+.group-carousel-content .body p a:hover{
+  background-color:var(--green-dark);
 }
 
-.field_hero_carousel li article .node-hero_slide-content .body p{
-  transition: transform ease-in-out 800ms;
-}
-
-.field_hero_carousel li article .node-hero_slide-content .field_image, .field_hero_carousel li article .node-hero_slide-content .field_image img{
-  display: block;
-  max-width: 100%;
-}
-
-.field_hero_carousel li article .node-hero_slide-content .field_image img {
-  filter: brightness(60%);
-  height: auto;
-}
-
-.field_hero_carousel .slick-next,.field_hero_carousel .slick-prev{
-  width: 50px;
-  height: 50px;
-}
-.field_hero_carousel .slick-next {
-  right: 50px;
-
-}
-.field_hero_carousel .slick-prev {
-  left: 50px;
-}
-
-.field_hero_carousel .slick-arrow:before{
-  font-size: 40px;
-}
-
-.field_hero_carousel .slick-dots--custom {
+.carousel-control{
   position: absolute;
-   bottom: 25px;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+
 }
+
+.carousel-control:hover{
+  background-color: var(--white-darker);
+}
+.carousel-control--left{
+  left: 5%;
+}
+
+.carousel-control--right{
+  right: 5%;
+}
+
+.carousel-dots{
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap:.5rem;
+}
+.carousel-dot{
+  width: 5%;
+  height: 2px;
+  background-color: var(--white-darker);
+  border-radius: 35px;
+  transition: color ease-in 300ms;
+  cursor: pointer;
+}
+
+.carousel-dot--active, .carousel-dot:hover{
+  background-color: var(--white-light);;
+}
+
+
